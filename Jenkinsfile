@@ -4,7 +4,7 @@ pipeline {
         stages {
         stage("checkout") {
             steps {
-                sh "https://github.com/Jagga-1309/hello-world-war.git"
+                sh "git clone https://github.com/Jagga-1309/hello-world-war.git"
             }
         }
         stage("build") {
