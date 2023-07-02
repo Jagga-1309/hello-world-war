@@ -27,5 +27,10 @@ pipeline {
                       ) 
                  } 
               }
+        stage ('copy') {
+            steps {
+                sh 'scp /var/lib/jenkins/workspace/demo_pipeline_jfrog/target/hello-world-war-1.0.1.war /opt/apache-tomcat-8.5.5.90/webapps/'
+            }
+        }
 }
 }
